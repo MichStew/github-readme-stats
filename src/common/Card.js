@@ -47,7 +47,7 @@ class Card {
 
     this.css = "";
 
-    this.paddingX = 25;
+    this.paddingX = 500;
     this.paddingY = 35;
     this.titlePrefixIcon = titlePrefixIcon;
     this.animations = true;
@@ -114,7 +114,7 @@ class Card {
   renderTitle() {
     const titleText = `
       <text
-        x="0"
+        x="500"
         y="0"
         class="header"
         data-testid="header"
@@ -141,7 +141,7 @@ class Card {
       >
         ${flexLayout({
           items: [this.titlePrefixIcon ? prefixIcon : "", titleText],
-          gap: 25,
+          gap: 50, /* an attempt to get the languages with percentages over to the right, more centered style, probably won't work */
         }).join("")}
       </g>
     `;
